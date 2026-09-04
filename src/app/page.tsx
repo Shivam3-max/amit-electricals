@@ -9,6 +9,12 @@ import { brands, catalogIndex, departments } from "@/lib/catalog";
 import { db } from "@/lib/db";
 import { getFaqs, getGiftBands } from "@/lib/content";
 
+// Banners, gift bands and FAQ all come from the database and are editable
+// live from the admin — this page has to be rendered per-request, not
+// prerendered once at build time (when there's no database to read from
+// anyway, since the build step never has a live connection).
+export const dynamic = "force-dynamic";
+
 /** Official brand marks, used with permission as their authorised distributor. */
 const BRAND_LOGOS: Record<string, string> = {
   polycab: "/brands/polycab.png",

@@ -1,15 +1,16 @@
 // Amit Electricals — admin + dealer accounts database.
-// SQLite in dev; the storefront catalogue itself stays a build-time JSON
-// file (fast, no round trip for 2,500+ products) — this database is for
+// Postgres in production (Vercel's filesystem is ephemeral, so SQLite can't
+// live there) — the storefront catalogue itself stays a build-time JSON
+// file (fast, no round trip for 2,500+ products); this database is for
 // everything that genuinely changes at runtime: accounts, enquiries,
-// messages and (later) catalogue overrides / homepage content.
+// messages and catalogue overrides / homepage content.
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 

@@ -12,6 +12,10 @@ export const metadata: Metadata = {
     "Diwali rounds, milestone rewards and dealer gifting curated from Surya, Polycab, Halonix and Indo appliance ranges — budget-banded, with logo and multi-address dispatch.",
 };
 
+// Gift bands come from the database and are editable live from the admin —
+// render per-request rather than prerendering once at build time.
+export const dynamic = "force-dynamic";
+
 const OCCASIONS = [
   ["Diwali & festival rounds", "The single biggest gifting event of the year, planned and dispatched on a schedule you set."],
   ["Work anniversaries & milestones", "Individually addressed, ordered as they come up rather than in one large batch."],
