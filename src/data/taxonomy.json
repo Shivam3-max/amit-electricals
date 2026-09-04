@@ -1,0 +1,1137 @@
+[
+ {
+  "slug": "wires-cables",
+  "label": "Wires & Cables",
+  "blurb": "House wire, flexible, submersible and LV/MV power cable.",
+  "count": 248,
+  "brands": [
+   "Polycab"
+  ],
+  "categories": [
+   {
+    "slug": "polycab-green-wire-plus",
+    "label": "Polycab Green Wire+",
+    "count": 34,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "polycaboptima-plus",
+    "label": "Polycaboptima +",
+    "count": 34,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "etira-house-wires",
+    "label": "Etira House Wires",
+    "count": 33,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "polycabmaxima-plus-green-wire",
+    "label": "Polycabmaxima+ Green Wire",
+    "count": 32,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "polycabprimma-house-wires",
+    "label": "Polycabprimma House Wires",
+    "count": 32,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "polycabsuprema-house-wires",
+    "label": "Polycabsuprema House Wires",
+    "count": 30,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "greenwire-180m",
+    "label": "Greenwire 180M",
+    "count": 25,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "polycab-lf-fr-180m",
+    "label": "Polycab Lf Fr 180M",
+    "count": 25,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "cable-accessories",
+    "label": "Cable Accessories",
+    "count": 3,
+    "brands": [
+     "Polycab"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "lighting",
+  "label": "Lighting",
+  "blurb": "Lamps, battens, panels, downlighters, outdoor and industrial luminaires.",
+  "count": 580,
+  "brands": [
+   "Halonix",
+   "Polycab",
+   "Rexsun",
+   "Surya"
+  ],
+  "categories": [
+   {
+    "slug": "led-cob",
+    "label": "LED COB",
+    "count": 123,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "downlight",
+    "label": "Downlight",
+    "count": 68,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "lighting",
+    "label": "Lighting",
+    "count": 50,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "led-bulb",
+    "label": "LED Bulb",
+    "count": 47,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "outdoor-lights",
+    "label": "Outdoor Lights",
+    "count": 46,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "rope-and-strip-lights",
+    "label": "Rope and Strip Lights",
+    "count": 38,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "panels-led-downlighters",
+    "label": "Panels LED Downlighters",
+    "count": 28,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "led-lamps",
+    "label": "LED Lamps",
+    "count": 27,
+    "brands": [
+     "Halonix",
+     "Surya"
+    ]
+   },
+   {
+    "slug": "commercial-luminaires",
+    "label": "Commercial Luminaires",
+    "count": 26,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "decorative-lights",
+    "label": "Decorative Lights",
+    "count": 16,
+    "brands": [
+     "Halonix",
+     "Surya"
+    ]
+   },
+   {
+    "slug": "led-battens",
+    "label": "LED Battens",
+    "count": 13,
+    "brands": [
+     "Rexsun",
+     "Surya"
+    ]
+   },
+   {
+    "slug": "led-batten",
+    "label": "LED Batten",
+    "count": 11,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "led-tubelights-decorative-battens",
+    "label": "LED Tubelights Decorative Battens",
+    "count": 9,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "electrical-accessories",
+    "label": "Electrical Accessories",
+    "count": 8,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "extension-cord",
+    "label": "Extension Cord",
+    "count": 8,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "panel-light",
+    "label": "Panel Light",
+    "count": 8,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "industrial-luminaires",
+    "label": "Industrial Luminaires",
+    "count": 7,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "decorative-cob",
+    "label": "Decorative COB",
+    "count": 6,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "gls-ftl-fittings-ballast",
+    "label": "GLS FTL Fittings Ballast",
+    "count": 6,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "landscape-lighting-luminaires",
+    "label": "Landscape Lighting Luminaires",
+    "count": 6,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "flood-lighting-luminaires",
+    "label": "Flood Lighting Luminaires",
+    "count": 5,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "torches",
+    "label": "Torches",
+    "count": 5,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "led-downlighters",
+    "label": "LED Downlighters",
+    "count": 3,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "torches-and-emergency-lights",
+    "label": "Torches and Emergency Lights",
+    "count": 3,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "2x2-panels",
+    "label": "2X2 Panels",
+    "count": 2,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "bug-zapper",
+    "label": "Bug Zapper",
+    "count": 2,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "door-bell",
+    "label": "Door Bell",
+    "count": 2,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "ignus",
+    "label": "Ignus",
+    "count": 2,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "led-outdoor-lights",
+    "label": "LED Outdoor Lights",
+    "count": 2,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "led-street-flood-lights",
+    "label": "LED Street Flood Lights",
+    "count": 2,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "fire-alarm",
+    "label": "Fire Alarm",
+    "count": 1,
+    "brands": [
+     "Halonix"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "fans",
+  "label": "Fans",
+  "blurb": "Ceiling, BLDC, exhaust, pedestal, wall, table and air circulators.",
+  "count": 510,
+  "brands": [
+   "Halonix",
+   "Indo",
+   "Polycab",
+   "Surya"
+  ],
+  "categories": [
+   {
+    "slug": "bldc-fan",
+    "label": "BLDC Fan",
+    "count": 96,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "designer-fan",
+    "label": "Designer Fan",
+    "count": 79,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "high-speed-fan",
+    "label": "High Speed Fan",
+    "count": 67,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "exhaust-fan",
+    "label": "Exhaust Fan",
+    "count": 30,
+    "brands": [
+     "Indo",
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "ceiling-fans",
+    "label": "Ceiling Fans",
+    "count": 21,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "pedestal-fans",
+    "label": "Pedestal Fans",
+    "count": 21,
+    "brands": [
+     "Halonix",
+     "Surya"
+    ]
+   },
+   {
+    "slug": "pedestal-fan",
+    "label": "Pedestal Fan",
+    "count": 19,
+    "brands": [
+     "Indo",
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "climate-control",
+    "label": "Climate Control",
+    "count": 17,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "wall-fan",
+    "label": "Wall Fan",
+    "count": 17,
+    "brands": [
+     "Indo",
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "wall-fans",
+    "label": "Wall Fans",
+    "count": 17,
+    "brands": [
+     "Halonix",
+     "Surya"
+    ]
+   },
+   {
+    "slug": "standard-ceiling",
+    "label": "Standard Ceiling",
+    "count": 15,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "bldc-technology-fans",
+    "label": "BLDC Technology Fans",
+    "count": 14,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "bldc-celing-fan",
+    "label": "BLDC Celing Fan",
+    "count": 12,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "decorative-ceiling",
+    "label": "Decorative Ceiling",
+    "count": 12,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "table-fan",
+    "label": "Table Fan",
+    "count": 12,
+    "brands": [
+     "Indo",
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "decorative-ceiling-fan",
+    "label": "Decorative Ceiling Fan",
+    "count": 9,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "table-fans",
+    "label": "Table Fans",
+    "count": 8,
+    "brands": [
+     "Halonix",
+     "Surya"
+    ]
+   },
+   {
+    "slug": "domestic-exhaust",
+    "label": "Domestic Exhaust",
+    "count": 7,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "air-circulator",
+    "label": "Air Circulator",
+    "count": 6,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "exhaust-fans",
+    "label": "Exhaust Fans",
+    "count": 6,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "farrata-fan",
+    "label": "Farrata Fan",
+    "count": 6,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "ceiling-fan",
+    "label": "Ceiling Fan",
+    "count": 5,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "standard-fan",
+    "label": "Standard Fan",
+    "count": 5,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "inverter-table-fans",
+    "label": "Inverter Table Fans",
+    "count": 4,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "personal-fans",
+    "label": "Personal Fans",
+    "count": 3,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "heavy-duty-exhaust-fans",
+    "label": "Heavy Duty Exhaust Fans",
+    "count": 1,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "premium-ceiling",
+    "label": "Premium Ceiling",
+    "count": 1,
+    "brands": [
+     "Surya"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "switches",
+  "label": "Switches & Accessories",
+  "blurb": "Modular plates, boxes, plug tops and extension boards.",
+  "count": 557,
+  "brands": [
+   "Halonix",
+   "Polycab",
+   "Surya"
+  ],
+  "categories": [
+   {
+    "slug": "valencia-glass-plates",
+    "label": "Valencia (Glass Plates)",
+    "count": 80,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "caprina-square-plates",
+    "label": "Caprina (Square Plates)",
+    "count": 60,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "stylaz-square-plates",
+    "label": "Stylaz (Square Plates)",
+    "count": 60,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "silvaz-chrome-collar-plates",
+    "label": "Silvaz (Chrome Collar Plates)",
+    "count": 50,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "levana-switches",
+    "label": "Levana Switches",
+    "count": 44,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "etira-switches",
+    "label": "Etira Switches",
+    "count": 39,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "etira-support-modules",
+    "label": "Etira Support Modules",
+    "count": 31,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "curl-plus-chrome-collar-plates",
+    "label": "Curl Plus (Chrome Collar Plates)",
+    "count": 30,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "levana-support-modules",
+    "label": "Levana Support Modules",
+    "count": 21,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "curl-curve-plates",
+    "label": "Curl (Curve Plates)",
+    "count": 20,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "levana-hospitality-products",
+    "label": "Levana Hospitality Products",
+    "count": 18,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "etira-sockets",
+    "label": "Etira Sockets",
+    "count": 15,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "etira-hospitality-products",
+    "label": "Etira Hospitality Products",
+    "count": 12,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "etira-regulators-and-dimmers",
+    "label": "Etira Regulators and Dimmers",
+    "count": 12,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "concealed-boxes",
+    "label": "Concealed Boxes",
+    "count": 8,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "levana-regulators-and-dimmers",
+    "label": "Levana Regulators and Dimmers",
+    "count": 8,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "levana-sockets",
+    "label": "Levana Sockets",
+    "count": 8,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "surface-mounted-boxes",
+    "label": "Surface Mounted Boxes",
+    "count": 8,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "lamp-holders",
+    "label": "Lamp Holders",
+    "count": 6,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "multiplug",
+    "label": "Multiplug",
+    "count": 6,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "ceiling-rose",
+    "label": "Ceiling Rose",
+    "count": 4,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "extension-boards",
+    "label": "Extension Boards",
+    "count": 4,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "spikeguard",
+    "label": "Spikeguard",
+    "count": 4,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "multi-plug",
+    "label": "Multi Plug",
+    "count": 3,
+    "brands": [
+     "Halonix"
+    ]
+   },
+   {
+    "slug": "doorbells",
+    "label": "Doorbells",
+    "count": 2,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "flex-boxes",
+    "label": "Flex Boxes",
+    "count": 2,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "plug-tops",
+    "label": "Plug Tops",
+    "count": 2,
+    "brands": [
+     "Polycab"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "switchgear",
+  "label": "Switchgear & Protection",
+  "blurb": "MCB, RCCB, RCBO, isolators, changeovers and distribution boards.",
+  "count": 492,
+  "brands": [
+   "Halonix",
+   "Polycab"
+  ],
+  "categories": [
+   {
+    "slug": "mcb",
+    "label": "MCB",
+    "count": 199,
+    "brands": [
+     "Halonix",
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "distribution-board",
+    "label": "Distribution Board",
+    "count": 123,
+    "brands": [
+     "Halonix",
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "rcbo",
+    "label": "RCBO",
+    "count": 48,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "etira-modular-mcbs",
+    "label": "Etira Modular Mcbs",
+    "count": 36,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "levana-modular-mcbs",
+    "label": "Levana Modular Mcbs",
+    "count": 24,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "rccb",
+    "label": "RCCB",
+    "count": 20,
+    "brands": [
+     "Halonix",
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "isolator",
+    "label": "Isolator",
+    "count": 19,
+    "brands": [
+     "Halonix",
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "accl",
+    "label": "ACCL",
+    "count": 15,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "mcb-changeover-switch",
+    "label": "MCB Changeover Switch",
+    "count": 6,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "changeover",
+    "label": "Changeover",
+    "count": 2,
+    "brands": [
+     "Halonix"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "appliances",
+  "label": "Appliances & Water Heating",
+  "blurb": "Geysers, room heaters, kitchen appliances and garment care.",
+  "count": 139,
+  "brands": [
+   "Indo",
+   "Polycab",
+   "Surya"
+  ],
+  "categories": [
+   {
+    "slug": "heating-appliances",
+    "label": "Heating Appliances",
+    "count": 23,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "garment-care",
+    "label": "Garment Care",
+    "count": 15,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "food-preparation",
+    "label": "Food Preparation",
+    "count": 14,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "cooking-range",
+    "label": "Cooking Range",
+    "count": 12,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "irons",
+    "label": "Irons",
+    "count": 10,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "kitchen",
+    "label": "Kitchen",
+    "count": 10,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "storage-water-heater",
+    "label": "Storage Water Heater",
+    "count": 9,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "general",
+    "label": "General",
+    "count": 8,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "iron",
+    "label": "Iron",
+    "count": 7,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "water-heater",
+    "label": "Water Heater",
+    "count": 7,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "instant-water-heater",
+    "label": "Instant Water Heater",
+    "count": 4,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "immersion-heaters",
+    "label": "Immersion Heaters",
+    "count": 3,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "kettle",
+    "label": "Kettle",
+    "count": 3,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "air-fryers",
+    "label": "Air Fryers",
+    "count": 2,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "immersion-rod",
+    "label": "Immersion Rod",
+    "count": 2,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "induction",
+    "label": "Induction",
+    "count": 2,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "infrared-cooktop",
+    "label": "Infrared Cooktop",
+    "count": 2,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "mosquito-rackets",
+    "label": "Mosquito Rackets",
+    "count": 2,
+    "brands": [
+     "Surya"
+    ]
+   },
+   {
+    "slug": "geyser",
+    "label": "Geyser",
+    "count": 1,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "mixer-grinder",
+    "label": "Mixer Grinder",
+    "count": 1,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "room-heater",
+    "label": "Room Heater",
+    "count": 1,
+    "brands": [
+     "Indo"
+    ]
+   },
+   {
+    "slug": "solar-heater",
+    "label": "Solar Heater",
+    "count": 1,
+    "brands": [
+     "Indo"
+    ]
+   }
+  ]
+ },
+ {
+  "slug": "solar",
+  "label": "Solar & Green Energy",
+  "blurb": "Grid-tie inverters, solar cable, solar street lighting and pumps.",
+  "count": 47,
+  "brands": [
+   "Halonix",
+   "Polycab"
+  ],
+  "categories": [
+   {
+    "slug": "grid-tie-inverter",
+    "label": "Grid-Tie Inverter",
+    "count": 36,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "distribution-boxes",
+    "label": "Distribution Boxes",
+    "count": 6,
+    "brands": [
+     "Polycab"
+    ]
+   },
+   {
+    "slug": "solar-lighting-luminaires",
+    "label": "Solar Lighting Luminaires",
+    "count": 5,
+    "brands": [
+     "Halonix"
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,27 @@
+[
+ {
+  "slug": "polycab",
+  "label": "Polycab",
+  "note": "Wires, cables, switchgear, fans and lighting."
+ },
+ {
+  "slug": "surya",
+  "label": "Surya",
+  "note": "Lighting, fans and home appliances."
+ },
+ {
+  "slug": "halonix",
+  "label": "Halonix",
+  "note": "LED lighting, fans, switchgear and inverter range."
+ },
+ {
+  "slug": "indo",
+  "label": "Indo",
+  "note": "Water heating, room heating and kitchen appliances."
+ },
+ {
+  "slug": "rexsun",
+  "label": "Rexsun",
+  "note": "Our own label."
+ }
+]

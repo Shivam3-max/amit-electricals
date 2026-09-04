@@ -1,0 +1,234 @@
+// Amit Electricals — admin + dealer accounts database.
+// SQLite in dev; the storefront catalogue itself stays a build-time JSON
+// file (fast, no round trip for 2,500+ products) — this database is for
+// everything that genuinely changes at runtime: accounts, enquiries,
+// messages and (later) catalogue overrides / homepage content.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------- dealers
+
+/// A registered trade account. Registering once means an enquiry never has
+/// to be re-typed — company, GSTIN, phone etc. are pulled from here.
+model Dealer {
+  id           String   @id @default(cuid())
+  company      String
+  contact      String
+  phone        String   @unique
+  email        String?
+  gstin        String?
+  city         String?
+  address      String?
+  passwordHash String
+  tier         DealerTier   @default(RETAILER)
+  status       DealerStatus @default(APPROVED)
+  notes        String? // internal, admin-only
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  sessions  DealerSession[]
+  enquiries Enquiry[]
+
+  @@index([status])
+  @@index([tier])
+}
+
+enum DealerTier {
+  RETAILER
+  DEALER
+  PROJECT
+}
+
+enum DealerStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model DealerSession {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  dealerId  String
+  dealer    Dealer   @relation(fields: [dealerId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+
+  @@index([dealerId])
+}
+
+// -------------------------------------------------------------- enquiries
+
+model Enquiry {
+  id         String   @id @default(cuid())
+  ref        String   @unique
+  receivedAt DateTime @default(now())
+
+  dealerId String?
+  dealer   Dealer? @relation(fields: [dealerId], references: [id])
+
+  company    String
+  contact    String
+  phone      String
+  email      String?
+  gstin      String?
+  city       String?
+  site       String?
+  deliverBy  String?
+  purpose    String
+  notes      String?
+  listName   String?
+
+  status        EnquiryStatus @default(NEW)
+  quotedTotal   Float?
+  assignedTo    String?
+  updatedAt     DateTime      @updatedAt
+
+  lines         EnquiryLine[]
+  internalNotes InternalNote[]
+
+  @@index([status])
+  @@index([dealerId])
+}
+
+enum EnquiryStatus {
+  NEW
+  REVIEWING
+  QUOTED
+  CONFIRMED
+  DISPATCHED
+  CLOSED
+  CANCELLED
+}
+
+model EnquiryLine {
+  id        String  @id @default(cuid())
+  enquiryId String
+  enquiry   Enquiry @relation(fields: [enquiryId], references: [id], onDelete: Cascade)
+  code      String
+  name      String
+  brand     String
+  variant   String?
+  qty       Int
+  uom       String
+  note      String?
+  unitPrice Float? // filled in by the counter when quoting
+
+  @@index([enquiryId])
+}
+
+/// Internal counter-staff notes on an enquiry — never shown to the dealer.
+model InternalNote {
+  id        String   @id @default(cuid())
+  enquiryId String
+  enquiry   Enquiry  @relation(fields: [enquiryId], references: [id], onDelete: Cascade)
+  author    String
+  text      String
+  createdAt DateTime @default(now())
+
+  @@index([enquiryId])
+}
+
+// --------------------------------------------------------------- messages
+
+model Message {
+  id         String        @id @default(cuid())
+  ref        String        @unique
+  receivedAt DateTime      @default(now())
+  topic      String // general | dealer | gifting
+  name       String
+  phone      String
+  email      String?
+  company    String?
+  city       String?
+  message    String
+  status     MessageStatus @default(NEW)
+
+  @@index([status])
+  @@index([topic])
+}
+
+enum MessageStatus {
+  NEW
+  READ
+  RESPONDED
+  ARCHIVED
+}
+
+// ----------------------------------------------------------------- admin
+
+model AdminSession {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+}
+
+// -------------------------------------------------- catalogue & content
+// (built in a later pass — kept here so the schema doesn't need reshaping)
+
+/// A per-SKU edit layered on top of the scraped catalogue at build time.
+model ProductOverride {
+  id           String   @id @default(cuid())
+  code         String   @unique
+  name         String?
+  description  String?
+  specsJson    String? // JSON string, {label: value}
+  imagesJson   String? // JSON string array of /products/... paths
+  stock        String?
+  category     String?
+  categorySlug String?
+  dept         String?
+  brand        String?
+  isNew        Boolean  @default(false) // true = created entirely in admin (e.g. Rexsun)
+  updatedAt    DateTime @updatedAt
+}
+
+model Banner {
+  id       String    @id @default(cuid())
+  slot     Int       @unique
+  image    String
+  link     String?
+  label    String?
+  active   Boolean   @default(true)
+  order    Int       @default(0)
+  startsAt DateTime?
+  endsAt   DateTime?
+}
+
+/// Optional photo for one of the seven homepage department tiles — falls
+/// back to the existing brand-gradient card when unset or inactive. Keyed
+/// by the department slug (wires-cables, lighting, ...); the tile's link
+/// and position stay owned by the taxonomy, never by this table.
+model DeptBanner {
+  id     String  @id @default(cuid())
+  slug   String  @unique
+  image  String
+  active Boolean @default(true)
+}
+
+model GiftBand {
+  id        String @id @default(cuid())
+  range     String @unique
+  note      String
+  codesJson String // JSON array of product codes
+  order     Int    @default(0)
+}
+
+model FaqEntry {
+  id    String @id @default(cuid())
+  q     String @unique
+  a     String
+  order Int    @default(0)
+}
+
+model SiteSetting {
+  key   String @id
+  value String
+}
