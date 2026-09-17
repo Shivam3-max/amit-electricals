@@ -5,7 +5,7 @@ import { brands, catalogIndex } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Our brands",
-  description: "Amit Electricals is an authorised distributor for Surya, Polycab, Halonix and Indo.",
+  description: "Amit Electricals is an authorised distributor for Surya, Polycab, Halonix, Indo and HPL.",
 };
 
 export default function BrandsPage() {
@@ -16,8 +16,8 @@ export default function BrandsPage() {
         <p className="eyebrow">Authorised distributor</p>
         <h1 className="mt-2 text-[28px] lg:text-[36px]">The brands we carry</h1>
         <p className="mt-3 text-[14.5px] leading-relaxed text-ink-3">
-          Four principals, one counter. Every product on this site ships under the brand&apos;s own
-          warranty and support — we just make it one enquiry instead of four.
+          Five principals, one counter. Every product on this site ships under the brand&apos;s own
+          warranty and support — we just make it one enquiry instead of five.
         </p>
       </header>
 
@@ -25,6 +25,7 @@ export default function BrandsPage() {
         {brands.map((b) => {
           const count = catalogIndex.filter((r) => r.b === b.label).length;
           const isOwn = b.slug === "rexsun";
+          const pending = !isOwn && count === 0;
           return (
             <Link
               key={b.slug}
@@ -39,13 +40,17 @@ export default function BrandsPage() {
                   <span className="rounded bg-volt/25 px-2 py-0.5 font-mono text-[10px] tracking-[0.08em] uppercase text-ink-2">
                     Own label
                   </span>
+                ) : pending ? (
+                  <span className="rounded bg-mist-2 px-2 py-0.5 font-mono text-[10px] tracking-[0.08em] uppercase text-slate-soft">
+                    Range coming soon
+                  </span>
                 ) : (
                   <span className="font-mono text-[12px] text-slate-soft">{count} products</span>
                 )}
               </div>
               <p className="mt-3 text-[13.5px] leading-relaxed text-ink-3">{b.note}</p>
               <span className="mt-5 text-[13px] font-semibold text-copper">
-                {isOwn ? "Learn more" : `Browse ${b.label}`} →
+                {isOwn || pending ? "Learn more" : `Browse ${b.label}`} →
               </span>
             </Link>
           );

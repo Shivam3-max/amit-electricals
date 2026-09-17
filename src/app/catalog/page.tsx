@@ -9,7 +9,7 @@ const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v);
 export const metadata: Metadata = {
   title: "Full catalogue",
   description:
-    "Every line we stock across Surya, Polycab, Halonix and Indo — filter by brand, category and specification.",
+    "Every line we stock across Surya, Polycab, Halonix, Indo and HPL — filter by brand, category and specification.",
 };
 
 export default async function CatalogPage({ searchParams }: { searchParams: Promise<SP> }) {

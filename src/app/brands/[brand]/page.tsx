@@ -36,7 +36,9 @@ export default async function BrandPage({
   const rows = catalogIndex.filter((r) => r.b === b.label);
 
   if (rows.length === 0) {
-    // Rexsun — the own label, catalogue pending.
+    // Own label (Rexsun) or an authorised brand whose range isn't loaded yet
+    // (Indo, HPL) — either way, nothing to list, so say so plainly.
+    const isOwnLabel = b.slug === "rexsun";
     return (
       <div className="shell py-16">
         <Breadcrumbs items={[{ href: "/brands", label: "Brands" }, { label: b.label }]} />
@@ -46,10 +48,12 @@ export default async function BrandPage({
               <path d="M12 3l2.6 5.9 6.4.7-4.8 4.3 1.3 6.3L12 17l-5.5 3.2 1.3-6.3-4.8-4.3 6.4-.7Z" />
             </svg>
           </span>
-          <h1 className="mt-4 text-[24px]">{b.label} — our own label</h1>
+          <h1 className="mt-4 text-[24px]">{b.label} — {isOwnLabel ? "our own label" : "range being added"}</h1>
           <p className="mx-auto mt-3 max-w-md text-[13.5px] leading-relaxed text-ink-3">
-            {b.note} We&apos;re finalising the {b.label} range before listing it here. In the
-            meantime, our other four brands cover every department on this site.
+            {b.note}{" "}
+            {isOwnLabel
+              ? "We're finalising the range before listing it here."
+              : `We're an authorised ${b.label} distributor and are loading the range onto the site now — call the counter for stock and pricing today.`}
           </p>
           <Link href="/brands" className="btn btn-ink mt-6">
             Back to brands

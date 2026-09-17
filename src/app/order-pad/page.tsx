@@ -6,7 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Order pad",
   description:
-    "Type or paste catalogue codes to build a bulk enquiry across Surya, Polycab, Halonix and Indo in minutes.",
+    "Type or paste catalogue codes to build a bulk enquiry across Surya, Polycab, Halonix, Indo and HPL in minutes.",
 };
 
 export default function OrderPadPage() {

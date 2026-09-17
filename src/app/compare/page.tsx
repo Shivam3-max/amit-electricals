@@ -4,7 +4,7 @@ import CompareClient from "@/components/CompareClient";
 
 export const metadata: Metadata = {
   title: "Compare products",
-  description: "Compare up to four products across Surya, Polycab, Halonix and Indo, spec by spec.",
+  description: "Compare up to four products across Surya, Polycab, Halonix, Indo and HPL, spec by spec.",
 };
 
 export default function ComparePage() {

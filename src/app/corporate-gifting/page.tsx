@@ -9,7 +9,7 @@ import { getGiftBands } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Corporate & employee gifting",
   description:
-    "Diwali rounds, milestone rewards and dealer gifting curated from Surya, Polycab, Halonix and Indo appliance ranges — budget-banded, with logo and multi-address dispatch.",
+    "Diwali rounds, milestone rewards and dealer gifting curated across our range — budget-banded, with logo and multi-address dispatch.",
 };
 
 // Gift bands come from the database and are editable live from the admin —
@@ -24,7 +24,7 @@ const OCCASIONS = [
 ];
 
 const STEPS = [
-  ["01", "Pick a budget band", "Or tell us a number and we shortlist across all four brands."],
+  ["01", "Pick a budget band", "Or tell us a number and we shortlist across our full range."],
   ["02", "Confirm quantity & addresses", "One bulk delivery, or split across offices — either works."],
   ["03", "Add logo where possible", "Co-branding depends on the item; we confirm what's feasible before you commit."],
   ["04", "We dispatch on your date", "Timed for the event, not for our convenience."],
@@ -44,8 +44,7 @@ export default async function CorporateGiftingPage() {
         <p className="mt-3 text-[14.5px] leading-relaxed text-ink-3">
           Diwali rounds, milestone rewards, onboarding kits and channel-partner gifting — built from
           appliance and fan ranges people actually use, not novelty items that go in a cupboard. Pick
-          a budget band below, or tell us the occasion and we&apos;ll shortlist across all four
-          brands.
+          a budget band below, or tell us the occasion and we&apos;ll shortlist across our full range.
         </p>
       </header>
 

@@ -2,7 +2,7 @@
  {
   "slug": "polycab",
   "label": "Polycab",
-  "note": "Wires, cables, switchgear, fans and lighting."
+  "note": "Wires and cables, MCBs/switchgear and modular switches."
  },
  {
   "slug": "surya",
@@ -12,12 +12,17 @@
  {
   "slug": "halonix",
   "label": "Halonix",
-  "note": "LED lighting, fans, switchgear and inverter range."
+  "note": "Domestic and professional LED lighting, fans and switchgear."
  },
  {
   "slug": "indo",
   "label": "Indo",
-  "note": "Water heating, room heating and kitchen appliances."
+  "note": "Switches and switchgear."
+ },
+ {
+  "slug": "hpl",
+  "label": "HPL",
+  "note": "Switches, accessories and switchgear."
  },
  {
   "slug": "rexsun",

@@ -5,12 +5,12 @@ import { brands, stats } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "About us",
-  description: "Amit Electricals is an authorised distributor for Surya, Polycab, Halonix and Indo.",
+  description: "Amit Electricals is an authorised distributor for Surya, Polycab, Halonix, Indo and HPL.",
 };
 
 const VALUES = [
   ["Genuine stock only", "Every line ships under the brand's own warranty. We carry what we're authorised to carry."],
-  ["One counter, four brands", "You place one enquiry. We split it across principals and pack it as one dispatch where we can."],
+  ["One counter, five brands", "You place one enquiry. We split it across principals and pack it as one dispatch where we can."],
   ["Rates that reflect volume", "A retailer, a dealer and a contractor don't pay the same rate — and shouldn't."],
   ["A person on the other end", "The platform gets the list right. A person still prices it and picks up the phone."],
 ];
@@ -24,10 +24,10 @@ export default function AboutPage() {
         <p className="eyebrow">Since day one, one counter</p>
         <h1 className="mt-2 text-[28px] lg:text-[36px]">About Amit Electricals</h1>
         <p className="mt-3 text-[14.5px] leading-relaxed text-ink-3">
-          Amit Electricals is an authorised distributor for Surya, Polycab, Halonix and Indo — wires,
-          lighting, fans, switchgear and appliances, sold to electrical contractors, retailers,
-          dealers and project teams across the region. This site exists so that the ordering side of
-          the business is as fast as the counter always has been.
+          Amit Electricals is an authorised distributor for Surya, Polycab, Halonix, Indo and HPL —
+          wires, lighting, fans, switches, switchgear and appliances, sold to electrical contractors,
+          retailers, dealers and project teams across the region. This site exists so that the
+          ordering side of the business is as fast as the counter always has been.
         </p>
       </header>
 

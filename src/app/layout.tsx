@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s · Amit Electricals",
   },
   description:
-    `Authorised distributor for Surya, Polycab, Halonix and Indo. Browse ${stats.products}+ ` +
+    `Authorised distributor for Surya, Polycab, Halonix, Indo and HPL. Browse ${stats.products}+ ` +
     "products, build a bulk enquiry across brands and get a quote back from one counter.",
   applicationName: "Amit Electricals",
   keywords: [
@@ -44,13 +44,14 @@ export const metadata: Metadata = {
     "Polycab distributor",
     "Surya lighting dealer",
     "Halonix distributor",
-    "Indo appliances dealer",
+    "Indo switchgear dealer",
+    "HPL switches dealer",
     "wires and cables wholesale",
   ],
   openGraph: {
     title: "Amit Electricals — Bulk electrical ordering for the trade",
     description:
-      "One counter for Surya, Polycab, Halonix and Indo. Order pad, bulk upload and cross-brand comparison.",
+      "One counter for Surya, Polycab, Halonix, Indo and HPL. Order pad, bulk upload and cross-brand comparison.",
     type: "website",
   },
   robots: { index: true, follow: true },

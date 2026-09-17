@@ -86,60 +86,18 @@
   "slug": "lighting",
   "label": "Lighting",
   "blurb": "Lamps, battens, panels, downlighters, outdoor and industrial luminaires.",
-  "count": 580,
+  "count": 212,
   "brands": [
    "Halonix",
-   "Polycab",
-   "Rexsun",
    "Surya"
   ],
   "categories": [
-   {
-    "slug": "led-cob",
-    "label": "LED COB",
-    "count": 123,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "downlight",
-    "label": "Downlight",
-    "count": 68,
-    "brands": [
-     "Polycab"
-    ]
-   },
    {
     "slug": "lighting",
     "label": "Lighting",
     "count": 50,
     "brands": [
      "Halonix"
-    ]
-   },
-   {
-    "slug": "led-bulb",
-    "label": "LED Bulb",
-    "count": 47,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "outdoor-lights",
-    "label": "Outdoor Lights",
-    "count": 46,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "rope-and-strip-lights",
-    "label": "Rope and Strip Lights",
-    "count": 38,
-    "brands": [
-     "Polycab"
     ]
    },
    {
@@ -160,14 +118,6 @@
     ]
    },
    {
-    "slug": "commercial-luminaires",
-    "label": "Commercial Luminaires",
-    "count": 26,
-    "brands": [
-     "Halonix"
-    ]
-   },
-   {
     "slug": "decorative-lights",
     "label": "Decorative Lights",
     "count": 16,
@@ -179,18 +129,9 @@
    {
     "slug": "led-battens",
     "label": "LED Battens",
-    "count": 13,
+    "count": 12,
     "brands": [
-     "Rexsun",
      "Surya"
-    ]
-   },
-   {
-    "slug": "led-batten",
-    "label": "LED Batten",
-    "count": 11,
-    "brands": [
-     "Polycab"
     ]
    },
    {
@@ -215,14 +156,6 @@
     "count": 8,
     "brands": [
      "Halonix"
-    ]
-   },
-   {
-    "slug": "panel-light",
-    "label": "Panel Light",
-    "count": 8,
-    "brands": [
-     "Polycab"
     ]
    },
    {
@@ -351,47 +284,12 @@
   "slug": "fans",
   "label": "Fans",
   "blurb": "Ceiling, BLDC, exhaust, pedestal, wall, table and air circulators.",
-  "count": 510,
+  "count": 168,
   "brands": [
    "Halonix",
-   "Indo",
-   "Polycab",
    "Surya"
   ],
   "categories": [
-   {
-    "slug": "bldc-fan",
-    "label": "BLDC Fan",
-    "count": 96,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "designer-fan",
-    "label": "Designer Fan",
-    "count": 79,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "high-speed-fan",
-    "label": "High Speed Fan",
-    "count": 67,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "exhaust-fan",
-    "label": "Exhaust Fan",
-    "count": 30,
-    "brands": [
-     "Indo",
-     "Polycab"
-    ]
-   },
    {
     "slug": "ceiling-fans",
     "label": "Ceiling Fans",
@@ -410,29 +308,11 @@
     ]
    },
    {
-    "slug": "pedestal-fan",
-    "label": "Pedestal Fan",
-    "count": 19,
-    "brands": [
-     "Indo",
-     "Polycab"
-    ]
-   },
-   {
     "slug": "climate-control",
     "label": "Climate Control",
     "count": 17,
     "brands": [
      "Surya"
-    ]
-   },
-   {
-    "slug": "wall-fan",
-    "label": "Wall Fan",
-    "count": 17,
-    "brands": [
-     "Indo",
-     "Polycab"
     ]
    },
    {
@@ -477,15 +357,6 @@
     ]
    },
    {
-    "slug": "table-fan",
-    "label": "Table Fan",
-    "count": 12,
-    "brands": [
-     "Indo",
-     "Polycab"
-    ]
-   },
-   {
     "slug": "decorative-ceiling-fan",
     "label": "Decorative Ceiling Fan",
     "count": 9,
@@ -511,43 +382,11 @@
     ]
    },
    {
-    "slug": "air-circulator",
-    "label": "Air Circulator",
-    "count": 6,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
     "slug": "exhaust-fans",
     "label": "Exhaust Fans",
     "count": 6,
     "brands": [
      "Halonix"
-    ]
-   },
-   {
-    "slug": "farrata-fan",
-    "label": "Farrata Fan",
-    "count": 6,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "ceiling-fan",
-    "label": "Ceiling Fan",
-    "count": 5,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "standard-fan",
-    "label": "Standard Fan",
-    "count": 5,
-    "brands": [
-     "Polycab"
     ]
    },
    {
@@ -913,10 +752,8 @@
   "slug": "appliances",
   "label": "Appliances & Water Heating",
   "blurb": "Geysers, room heaters, kitchen appliances and garment care.",
-  "count": 139,
+  "count": 89,
   "brands": [
-   "Indo",
-   "Polycab",
    "Surya"
   ],
   "categories": [
@@ -969,91 +806,11 @@
     ]
    },
    {
-    "slug": "storage-water-heater",
-    "label": "Storage Water Heater",
-    "count": 9,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "general",
-    "label": "General",
-    "count": 8,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "iron",
-    "label": "Iron",
-    "count": 7,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "water-heater",
-    "label": "Water Heater",
-    "count": 7,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "instant-water-heater",
-    "label": "Instant Water Heater",
-    "count": 4,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
     "slug": "immersion-heaters",
     "label": "Immersion Heaters",
     "count": 3,
     "brands": [
      "Surya"
-    ]
-   },
-   {
-    "slug": "kettle",
-    "label": "Kettle",
-    "count": 3,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "air-fryers",
-    "label": "Air Fryers",
-    "count": 2,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "immersion-rod",
-    "label": "Immersion Rod",
-    "count": 2,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "induction",
-    "label": "Induction",
-    "count": 2,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "infrared-cooktop",
-    "label": "Infrared Cooktop",
-    "count": 2,
-    "brands": [
-     "Indo"
     ]
    },
    {
@@ -1063,38 +820,6 @@
     "brands": [
      "Surya"
     ]
-   },
-   {
-    "slug": "geyser",
-    "label": "Geyser",
-    "count": 1,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "mixer-grinder",
-    "label": "Mixer Grinder",
-    "count": 1,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "room-heater",
-    "label": "Room Heater",
-    "count": 1,
-    "brands": [
-     "Indo"
-    ]
-   },
-   {
-    "slug": "solar-heater",
-    "label": "Solar Heater",
-    "count": 1,
-    "brands": [
-     "Indo"
-    ]
    }
   ]
  },
@@ -1102,28 +827,11 @@
   "slug": "solar",
   "label": "Solar & Green Energy",
   "blurb": "Grid-tie inverters, solar cable, solar street lighting and pumps.",
-  "count": 47,
+  "count": 5,
   "brands": [
-   "Halonix",
-   "Polycab"
+   "Halonix"
   ],
   "categories": [
-   {
-    "slug": "grid-tie-inverter",
-    "label": "Grid-Tie Inverter",
-    "count": 36,
-    "brands": [
-     "Polycab"
-    ]
-   },
-   {
-    "slug": "distribution-boxes",
-    "label": "Distribution Boxes",
-    "count": 6,
-    "brands": [
-     "Polycab"
-    ]
-   },
    {
     "slug": "solar-lighting-luminaires",
     "label": "Solar Lighting Luminaires",

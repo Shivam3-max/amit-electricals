@@ -174,12 +174,41 @@ function facets(specs, variantRows) {
 }
 
 export const BRAND_META = {
-  Polycab: { slug: "polycab", label: "Polycab", note: "Wires, cables, switchgear, fans and lighting." },
+  Polycab: { slug: "polycab", label: "Polycab", note: "Wires and cables, MCBs/switchgear and modular switches." },
   Surya: { slug: "surya", label: "Surya", note: "Lighting, fans and home appliances." },
-  Halonix: { slug: "halonix", label: "Halonix", note: "LED lighting, fans, switchgear and inverter range." },
-  Indo: { slug: "indo", label: "Indo", note: "Water heating, room heating and kitchen appliances." },
+  Halonix: { slug: "halonix", label: "Halonix", note: "Domestic and professional LED lighting, fans and switchgear." },
+  Indo: { slug: "indo", label: "Indo", note: "Switches and switchgear." },
+  HPL: { slug: "hpl", label: "HPL", note: "Switches, accessories and switchgear." },
   Rexsun: { slug: "rexsun", label: "Rexsun", note: "Our own label." },
 };
+
+/**
+ * Business-scope filter: Amit Electricals doesn't carry every category a
+ * brand makes, and the ingest feeds are scraped from each brand's *full*
+ * catalogue. Applied after department routing, before a product is kept —
+ * one auditable place to change what's carried per brand, instead of
+ * hand-editing or deleting rows out of ingest/data/*.json.
+ *
+ *  - Polycab: wire, MCB/switchgear and switches only — no lighting, fans,
+ *    water heaters or solar.
+ *  - Halonix: everything except the "Commercial Luminaires" line.
+ *  - Indo: switches/switchgear only. Every current ingest row is a home
+ *    appliance (irons, coolers, geysers, fans) — none of that is carried,
+ *    which empties Indo out until real switch/switchgear stock is added.
+ */
+const BRAND_SCOPE = {
+  polycab: { keepDepts: new Set(["wires-cables", "switchgear", "switches"]) },
+  halonix: { drop: (path) => path.join(" / ").toLowerCase().includes("commercial luminaires") },
+  indo: { keepDepts: new Set(["switches", "switchgear"]) },
+};
+
+function inScope(brandFolder, dept, path) {
+  const scope = BRAND_SCOPE[brandFolder];
+  if (!scope) return true;
+  if (scope.keepDepts && !scope.keepDepts.has(dept)) return false;
+  if (scope.drop && scope.drop(path)) return false;
+  return true;
+}
 
 export const DEPT_LIST = DEPARTMENTS;
 export { slug as slugify, title as titleCase };
@@ -218,6 +247,7 @@ export async function regenerateCatalog({ log = true } = {}) {
         .map((x) => String(x).replace(NBSP, " ").trim())
         .filter(Boolean);
       const dept = department(b, path);
+      if (!inScope(b, dept, path)) continue;
       const cat = category(path, dept);
       const vr = variants(r.variant_tables);
 

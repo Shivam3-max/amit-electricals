@@ -81,7 +81,7 @@ export default function Header({ departments }: { departments: Department[] }) {
         <div className="shell flex h-9 items-center justify-between text-[12.5px]">
           <p className="flex items-center gap-2">
             <span className="inline-block size-1.5 rounded-full bg-volt" />
-            Authorised distributor · Surya · Polycab · Halonix · Indo
+            Authorised distributor · Surya · Polycab · Halonix · Indo · HPL
           </p>
           <nav className="flex items-center gap-5">
             {UTILITY.map((u) => (

@@ -24,12 +24,12 @@ export const DEFAULT_GIFT_BANDS = [
   {
     range: "₹1,000 – ₹2,500",
     note: "The tier people remember you for.",
-    codes: ["SUR-3412F9", "HH-1205", "IMAGINA-1.5"],
+    codes: ["SUR-3412F9", "SUR-B549A8", "SUR-5EAF5E"],
   },
   {
     range: "₹2,500 and above",
     note: "Leadership gifting and top-tier channel partners.",
-    codes: ["HWHSVPB062P", "ZOLTA"],
+    codes: ["HAL-84C01C", "SUR-9227AE"],
   },
 ];
 
@@ -52,7 +52,7 @@ export const DEFAULT_FAQ = [
   },
   {
     q: "Can you match a competitor's specification?",
-    a: "Usually yes. Send the spec or the make and model you have been given, and we will come back with the closest equivalents across Surya, Polycab, Halonix and Indo.",
+    a: "Usually yes. Send the spec or the make and model you have been given, and we will come back with the closest equivalents across Surya, Polycab, Halonix, Indo and HPL.",
   },
 ];
 

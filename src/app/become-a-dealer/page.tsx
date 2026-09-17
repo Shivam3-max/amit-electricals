@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Become a dealer",
-  description: "Set up a rate-contract account with Amit Electricals for Surya, Polycab, Halonix and Indo.",
+  description: "Set up a rate-contract account with Amit Electricals for Surya, Polycab, Halonix, Indo and HPL.",
 };
 
 const TIERS = [

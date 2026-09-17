@@ -49,7 +49,7 @@ const SEGMENTS = [
   },
   {
     title: "Retailers & sub-dealers",
-    copy: "Counter-stock replenishment across four brands in one enquiry instead of four phone calls.",
+    copy: "Counter-stock replenishment across five brands in one enquiry instead of five phone calls.",
     points: ["Cross-brand basket", "Catalogue-code ordering", "Same-day proforma"],
     href: "/catalog",
     cta: "Browse the catalogue",
@@ -150,7 +150,7 @@ export default async function HomePage() {
             <div>
               <p className="eyebrow">Authorised distributor for</p>
               <h2 className="mt-1.5 text-[19px] sm:text-[22px] lg:text-[26px]">
-                Genuine stock, four principals
+                Genuine stock, five principals
               </h2>
             </div>
             <Link
@@ -189,6 +189,10 @@ export default async function HomePage() {
                       {b.slug === "rexsun" ? (
                         <span className="rounded bg-volt/25 px-1.5 py-0.5 font-mono text-[9px] tracking-[0.08em] uppercase text-ink-2 sm:text-[9.5px]">
                           Own label
+                        </span>
+                      ) : count === 0 ? (
+                        <span className="rounded bg-mist-2 px-1.5 py-0.5 font-mono text-[9px] tracking-[0.08em] uppercase text-slate-soft sm:text-[9.5px]">
+                          Range coming soon
                         </span>
                       ) : (
                         <span className="font-mono text-[10px] text-slate-soft sm:text-[11px]">
@@ -434,10 +438,10 @@ export default async function HomePage() {
           <div className="p-5 sm:p-8 lg:p-12">
             <p className="eyebrow">Cross-brand comparison</p>
             <h2 className="mt-3 text-[20px] sm:text-[26px] lg:text-[32px]">
-              Four brands, one spec sheet, side by side.
+              Five brands, one spec sheet, side by side.
             </h2>
             <p className="mt-3 max-w-lg text-[13px] leading-relaxed text-ink-3 sm:mt-4 sm:text-[14.5px]">
-              A 1200mm BLDC fan from Surya, Polycab and Halonix are not the same fan. Put up to four
+              A 1200mm BLDC fan from Surya and Halonix are not the same fan. Put up to four
               products in the compare tray and read air delivery, wattage, sweep, warranty and box
               quantity in one table — then add the winner to your list without leaving the page.
             </p>
