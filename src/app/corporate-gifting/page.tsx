@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ProductCard from "@/components/ProductCard";
 import ContactForm from "@/components/ContactForm";
+import GiftBudgetFilter from "@/components/GiftBudgetFilter";
 import { catalogIndex } from "@/lib/catalog";
 import { getGiftBands } from "@/lib/content";
 
@@ -31,8 +31,16 @@ const STEPS = [
 ];
 
 export default async function CorporateGiftingPage() {
-  const BANDS = await getGiftBands();
+  const giftBands = await getGiftBands();
   const byCode = new Map(catalogIndex.map((r) => [r.c, r]));
+  const BANDS = giftBands
+    .map((b) => ({
+      id: b.id,
+      range: b.range,
+      note: b.note,
+      rows: b.codes.map((c) => byCode.get(c)).filter((r): r is NonNullable<typeof r> => !!r),
+    }))
+    .filter((b) => b.rows.length > 0);
 
   return (
     <div className="shell py-8 lg:py-10">
@@ -62,25 +70,7 @@ export default async function CorporateGiftingPage() {
 
       <section className="mt-14">
         <p className="eyebrow mb-4">Shop by budget</p>
-        <div className="space-y-10">
-          {BANDS.map((b) => {
-            const rows = b.codes.map((c) => byCode.get(c)).filter((r): r is NonNullable<typeof r> => !!r);
-            if (!rows.length) return null;
-            return (
-              <div key={b.id}>
-                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-line pb-3">
-                  <h2 className="text-[19px]">{b.range}</h2>
-                  <p className="text-[13px] text-slate-soft">{b.note}</p>
-                </div>
-                <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-                  {rows.map((row) => (
-                    <ProductCard key={row.c} row={row} showCompare={false} />
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <GiftBudgetFilter bands={BANDS} />
         <p className="mt-6 text-[13px] text-slate-soft">
           These are starting points — the full{" "}
           <Link href="/catalog/appliances" className="font-semibold text-copper hover:underline">
