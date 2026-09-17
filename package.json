@@ -2,10 +2,13 @@
   "name": "amit-electricals",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev -p 3690",
-    "build": "next build",
-    "start": "next start -p 3690",
+    "build": "prisma generate && prisma migrate deploy && npm run catalog && next build",
+    "start": "next start -p 3000",
     "lint": "next lint",
     "catalog": "node scripts/build-catalog.mjs"
   },

@@ -1,6 +1,6 @@
 // Amit Electricals — admin + dealer accounts database.
-// Postgres in production (Vercel's filesystem is ephemeral, so SQLite can't
-// live there) — the storefront catalogue itself stays a build-time JSON
+// MySQL in production (provided by Hostinger Business hosting) — the
+// storefront catalogue itself stays a build-time JSON
 // file (fast, no round trip for 2,500+ products); this database is for
 // everything that genuinely changes at runtime: accounts, enquiries,
 // messages and catalogue overrides / homepage content.
@@ -10,7 +10,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -19,20 +19,20 @@ datasource db {
 /// A registered trade account. Registering once means an enquiry never has
 /// to be re-typed — company, GSTIN, phone etc. are pulled from here.
 model Dealer {
-  id           String   @id @default(cuid())
+  id           String       @id @default(cuid())
   company      String
   contact      String
-  phone        String   @unique
+  phone        String       @unique
   email        String?
   gstin        String?
   city         String?
-  address      String?
+  address      String?      @db.Text
   passwordHash String
   tier         DealerTier   @default(RETAILER)
   status       DealerStatus @default(APPROVED)
-  notes        String? // internal, admin-only
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  notes        String?      @db.Text // internal, admin-only
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
 
   sessions  DealerSession[]
   enquiries Enquiry[]
@@ -74,22 +74,22 @@ model Enquiry {
   dealerId String?
   dealer   Dealer? @relation(fields: [dealerId], references: [id])
 
-  company    String
-  contact    String
-  phone      String
-  email      String?
-  gstin      String?
-  city       String?
-  site       String?
-  deliverBy  String?
-  purpose    String
-  notes      String?
-  listName   String?
+  company   String
+  contact   String
+  phone     String
+  email     String?
+  gstin     String?
+  city      String?
+  site      String?
+  deliverBy String?
+  purpose   String
+  notes     String? @db.Text
+  listName  String?
 
-  status        EnquiryStatus @default(NEW)
-  quotedTotal   Float?
-  assignedTo    String?
-  updatedAt     DateTime      @updatedAt
+  status      EnquiryStatus @default(NEW)
+  quotedTotal Float?
+  assignedTo  String?
+  updatedAt   DateTime      @updatedAt
 
   lines         EnquiryLine[]
   internalNotes InternalNote[]
@@ -118,7 +118,7 @@ model EnquiryLine {
   variant   String?
   qty       Int
   uom       String
-  note      String?
+  note      String? @db.Text
   unitPrice Float? // filled in by the counter when quoting
 
   @@index([enquiryId])
@@ -130,7 +130,7 @@ model InternalNote {
   enquiryId String
   enquiry   Enquiry  @relation(fields: [enquiryId], references: [id], onDelete: Cascade)
   author    String
-  text      String
+  text      String   @db.Text
   createdAt DateTime @default(now())
 
   @@index([enquiryId])
@@ -148,7 +148,7 @@ model Message {
   email      String?
   company    String?
   city       String?
-  message    String
+  message    String        @db.Text
   status     MessageStatus @default(NEW)
 
   @@index([status])
@@ -171,6 +171,16 @@ model AdminSession {
   expiresAt DateTime
 }
 
+// Uploaded product and homepage artwork. Keeping the bytes in MySQL makes
+// uploads survive Hostinger's versioned deployments, which replace app files.
+model UploadedAsset {
+  id        String   @id @default(cuid())
+  fileName  String
+  mimeType  String
+  bytes     Bytes    @db.LongBlob
+  createdAt DateTime @default(now())
+}
+
 // -------------------------------------------------- catalogue & content
 // (built in a later pass — kept here so the schema doesn't need reshaping)
 
@@ -179,9 +189,9 @@ model ProductOverride {
   id           String   @id @default(cuid())
   code         String   @unique
   name         String?
-  description  String?
-  specsJson    String? // JSON string, {label: value}
-  imagesJson   String? // JSON string array of /products/... paths
+  description  String?  @db.Text
+  specsJson    String?  @db.LongText // JSON string, {label: value}
+  imagesJson   String?  @db.LongText // JSON string array of image paths
   stock        String?
   category     String?
   categorySlug String?
@@ -217,19 +227,19 @@ model DeptBanner {
 model GiftBand {
   id        String @id @default(cuid())
   range     String @unique
-  note      String
-  codesJson String // JSON array of product codes
+  note      String @db.Text
+  codesJson String @db.LongText // JSON array of product codes
   order     Int    @default(0)
 }
 
 model FaqEntry {
   id    String @id @default(cuid())
   q     String @unique
-  a     String
+  a     String @db.Text
   order Int    @default(0)
 }
 
 model SiteSetting {
   key   String @id
-  value String
+  value String @db.Text
 }

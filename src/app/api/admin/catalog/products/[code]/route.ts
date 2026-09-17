@@ -1,13 +1,12 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { requireAdminApi } from "@/lib/adminAuth";
-import { regenerateCatalog } from "@/lib/catalogRebuild";
 
 const str = (v: unknown, max = 4000) => String(v ?? "").trim().slice(0, max);
 
 /**
- * Creates or updates the admin override for one product, then regenerates
- * the static catalogue so the storefront reflects it immediately. `code`
+ * Creates or updates the admin override for one product. Hostinger bakes
+ * these overrides into the static catalogue during the next deployment. `code`
  * is "new" for a brand-new (e.g. Rexsun) product — the body then needs the
  * full set of fields since there's no scraped record underneath it.
  */
@@ -52,8 +51,7 @@ export async function PUT(req: Request, { params }: { params: Promise<{ code: st
     update: data,
   });
 
-  const stats = await regenerateCatalog({ log: false });
-  return NextResponse.json({ ok: true, code, stats });
+  return NextResponse.json({ ok: true, code, pendingDeploy: true });
 }
 
 /** Deletes the override — an edited product reverts to its scraped data; a
@@ -64,6 +62,5 @@ export async function DELETE(_req: Request, { params }: { params: Promise<{ code
 
   const { code } = await params;
   await db.productOverride.delete({ where: { code } }).catch(() => null);
-  const stats = await regenerateCatalog({ log: false });
-  return NextResponse.json({ ok: true, stats });
+  return NextResponse.json({ ok: true, pendingDeploy: true });
 }

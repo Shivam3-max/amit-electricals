@@ -109,7 +109,7 @@ export default function ProductForm({
         setError(data.error ?? "Could not save.");
         return;
       }
-      flash("Saved — catalogue rebuilt.");
+      flash("Saved — redeploy in Hostinger to publish.");
       if (isNew) router.push(`/admin/catalog/${data.code}`);
       else router.refresh();
     } catch {

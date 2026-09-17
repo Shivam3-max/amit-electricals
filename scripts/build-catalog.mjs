@@ -12,7 +12,7 @@
  * source of truth for anything it touches.
  *
  * Run directly (`node scripts/build-catalog.mjs`) or imported and called
- * as `regenerateCatalog()` from the admin API after a save.
+ * as `regenerateCatalog()` during the Hostinger build after migrations run.
  */
 import fs from "node:fs";
 import crypto from "node:crypto";

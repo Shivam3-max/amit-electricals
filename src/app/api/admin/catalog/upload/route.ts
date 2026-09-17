@@ -1,23 +1,18 @@
 import { NextResponse } from "next/server";
-import fs from "node:fs";
-import path from "node:path";
-import crypto from "node:crypto";
 import { requireAdminApi } from "@/lib/adminAuth";
+import { db } from "@/lib/db";
 
 const ALLOWED = new Set(["image/jpeg", "image/png", "image/webp"]);
 const EXT: Record<string, string> = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp" };
 const MAX_BYTES = 8 * 1024 * 1024;
 
-/** Saves one product photo under public/products/<brand>/, returns its public path. */
+/** Stores an uploaded image in MySQL so it survives Hostinger redeployments. */
 export async function POST(req: Request) {
   const denied = await requireAdminApi();
   if (denied) return denied;
 
   const form = await req.formData();
   const file = form.get("file");
-  const brandSlug = String(form.get("brand") ?? "misc").replace(/[^a-z0-9-]/gi, "").toLowerCase() || "misc";
-  const code = String(form.get("code") ?? "item").replace(/[^a-z0-9-]/gi, "").toLowerCase() || "item";
-
   if (!(file instanceof File)) {
     return NextResponse.json({ error: "No file received." }, { status: 400 });
   }
@@ -28,13 +23,17 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Image is larger than 8MB." }, { status: 422 });
   }
 
-  const ext = EXT[file.type];
-  const name = `${code}-${crypto.randomBytes(3).toString("hex")}.${ext}`;
-  const dir = path.join(process.cwd(), "public", "products", brandSlug);
-  fs.mkdirSync(dir, { recursive: true });
-
   const bytes = Buffer.from(await file.arrayBuffer());
-  fs.writeFileSync(path.join(dir, name), bytes);
+  const ext = EXT[file.type];
+  const baseName = file.name.replace(/\.[^.]+$/, "").replace(/[^a-z0-9-]/gi, "-").toLowerCase() || "image";
+  const asset = await db.uploadedAsset.create({
+    data: {
+      fileName: `${baseName}.${ext}`,
+      mimeType: file.type,
+      bytes,
+    },
+    select: { id: true },
+  });
 
-  return NextResponse.json({ path: `/products/${brandSlug}/${name}` });
+  return NextResponse.json({ path: `/api/assets/${asset.id}` });
 }
